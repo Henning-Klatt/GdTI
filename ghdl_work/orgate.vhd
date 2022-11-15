@@ -10,10 +10,10 @@ b: in std_logic;
 q: out std_logic);
 end orgate;
 
-architecture verhalten_or of orgate is
+architecture behavior_or of orgate is
 begin
 process(a, b) is
 begin
 q <= a or b;
 end process;
-end verhalten_or;
+end behavior_or;
