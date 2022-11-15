@@ -9,7 +9,7 @@ entity or_function is
 	q: out std_logic);
 end or_function;
 
-architecture verhalten of or_function is
+architecture behavior of or_function is
 begin
 	P1: process (a, b) is
 		begin
@@ -21,17 +21,17 @@ begin
 				q <= '0';
 		end if;
 	end process P1;
-end verhalten;
+end behavior;
 
-architecture struktur of or_function is
+architecture structure of or_function is
 	component orgate is
 		port(a, b: in std_logic; q: out std_logic);
 	end component orgate;
 begin
 	OR1: orgate port map(a, b, q);
-end struktur;
+end structure;
 
-architecture datenfluss of or_function is
+architecture datatransmission of or_function is
 begin
 	q <= a or b;
-end datenfluss;	
+end datatransmission;	
